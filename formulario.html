@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario - Requisitos Incluidos</title>
+</head>
+<body>
+
+    <h2 style="text-align: center; color: rgb(0, 0, 0);">Formulario de Inscripción</h2>
+
+    <form id="miFormulario" action="#" method="POST">
+        
+        <div>
+            <label>Tipo de Documento:</label>
+            <select required>
+                <option value="">Seleccione una opción...</option>
+                <option value="CC">Cédula de Ciudadanía</option>
+                <option value="TI">Tarjeta de Identidad</option>
+                <option value="CE">Cédula Extranjería</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Número de Documento:</label>
+            <input type="text" pattern="[0-9]+" required placeholder="Solo números">
+        </div>
+
+        <div>
+            <label>Nombres:</label>
+            <input type="text" minlength="3" maxlength="64" required placeholder="Entre 3 y 64 caracteres">
+        </div>
+
+        <div>
+            <label>Apellidos:</label>
+            <input type="text" minlength="3" maxlength="64" required placeholder="Entre 3 y 64 caracteres">
+        </div>
+
+        <div>
+            <label>Dirección:</label>
+            <input type="text" required placeholder="Escriba su dirección de residencia">
+        </div>
+
+        <div>
+            <label>Teléfono Fijo:</label>
+            <input type="tel" pattern="[0-9]+" required placeholder="Solo números">
+        </div>
+
+        <div>
+            <label>Teléfono Celular:</label>
+            <input type="tel" pattern="[0-9]{10}" required placeholder="Debe tener 10 dígitos">
+        </div>
+
+        <div>
+            <label>Correo Electrónico:</label>
+            <input type="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+" required placeholder="ejemplo@correo.com (incluya . _ -)">
+        </div>
+
+        <div>
+            <label>Usuario:</label>
+            <input type="text" pattern="^[a-zA-Z]{1,14}[0-9]{0,2}$" minlength="3" maxlength="16" required placeholder="3-16 letras y máx. 2 números al final">
+        </div>
+
+        <div>
+            <label>Contraseña (Password):</label>
+            <input type="password" 
+                   pattern="^(?=(.*[A-Z]){1,})(?=(.*[a-z]){2,})(?=(.*[0-9]){5,})[a-zA-Z0-9!?-+\/&$.]{16}$" 
+                   required placeholder="16 caracteres: 1 Mayús, 2 Minús, 5 Núm y símbolos">
+        </div>
+
+        <div>
+            <label>Fecha de Inscripción:</label>
+            <input type="date" min="2026-02-15" max="2026-03-06" required>
+            <small style="color: #0032d8;">Permitido: 15 de Feb al 06 de Mar 2026</small>
+        </div>
+
+        <div>
+            <label>Hobbies:</label>
+            <textarea rows="3" placeholder="Describa sus pasatiempos aquí..."></textarea>
+        </div>
+
+        <div class="botones">
+            <button type="submit" class="btn-enviar">REGISTRARSE</button>
+            <button type="reset" class="btn-limpiar">LIMPIAR</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
