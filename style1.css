@@ -54,7 +54,7 @@ input, select {
     cursor: pointer;
 }
 
-/* VALIDACIONES */
+
 .error {
     color: red;
     font-size: 12px;
